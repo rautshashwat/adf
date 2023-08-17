@@ -7,6 +7,14 @@
 			"metadata": "Data Factory name",
 			"defaultValue": "mygithubdatafactory"
 		},
+		"linktoAzureBlobStorage1_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'linktoAzureBlobStorage1'"
+		},
+		"linktoAzureSqlDatabase1_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'linktoAzureSqlDatabase1'"
+		},
 		"containerUri": {
 			"type": "string",
 			"metadata": "URI to storage account containing linked ARM templates"
@@ -33,6 +41,12 @@
 				"parameters": {
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
+					},
+					"linktoAzureBlobStorage1_connectionString": {
+						"value": "[parameters('linktoAzureBlobStorage1_connectionString')]"
+					},
+					"linktoAzureSqlDatabase1_connectionString": {
+						"value": "[parameters('linktoAzureSqlDatabase1_connectionString')]"
 					}
 				}
 			},
