@@ -1,0 +1,32 @@
+{
+	"name": "source_dataset",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "linktoAzureBlobStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "emp_data.csv",
+				"container": "adfdatacontainer"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "Emp_id",
+				"type": "String"
+			},
+			{
+				"name": "Emp_name",
+				"type": "String"
+			}
+		]
+	}
+}
